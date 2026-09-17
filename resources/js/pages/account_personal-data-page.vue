@@ -49,9 +49,11 @@ function submitForm() {
           />
         </div>
 
-        <fieldset class="account-personal-data__gender">
-          <legend>Sesso</legend>
-          <p>Serve per personalizzare l'animazione del prelievo.</p>
+        <section class="account-personal-data__gender" aria-labelledby="gender-label">
+          <div class="account-personal-data__gender-copy">
+            <p id="gender-label" class="account-personal-data__gender-label">Sesso</p>
+            <p class="account-personal-data__gender-help">Serve per personalizzare l'animazione del prelievo.</p>
+          </div>
           <div class="account-personal-data__choices">
             <AccountChoiceButton
               label="Uomo"
@@ -68,7 +70,7 @@ function submitForm() {
               @select="gender = $event"
             />
           </div>
-        </fieldset>
+        </section>
 
         <AccountDocumentSelect v-model="documentType" />
         <AccountInfoNote />

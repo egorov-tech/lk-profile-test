@@ -8,9 +8,11 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 const open = ref(false)
 const options = [
-  { value: 'identity-card', label: "Carta d'identità" },
   { value: 'passport', label: 'Passaporto' },
+  { value: 'identity-card', label: "Carta d’identità nazionale" },
   { value: 'driving-licence', label: 'Patente di guida' },
+  { value: 'residence-permit', label: 'Permesso di soggiorno' },
+  { value: 'other-document', label: 'Altro documento ufficiale' },
 ]
 const selectedLabel = computed(() => options.find(({ value }) => value === props.modelValue)?.label ?? 'Seleziona il tipo')
 
@@ -23,7 +25,7 @@ function select(value) {
 <template>
   <div class="account-document-select" @keydown.esc="open = false">
     <span id="document-type-label" class="account-document-select__label">Tipo di documento</span>
-    <div class="account-document-select__control">
+    <div class="account-document-select__control" :class="{ 'account-document-select__control--open': open }">
       <button
         class="account-document-select__trigger"
         type="button"
@@ -42,7 +44,6 @@ function select(value) {
           v-for="option in options"
           :key="option.value"
           class="account-document-select__option"
-          :class="{ 'account-document-select__option--active': modelValue === option.value }"
           type="button"
           role="option"
           :aria-selected="modelValue === option.value"
