@@ -1,0 +1,21 @@
+{
+  "name": "account-cabinet-test",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "latest",
+    "vite": "latest",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "latest",
+    "jsdom": "latest",
+    "vitest": "latest"
+  }
+}
