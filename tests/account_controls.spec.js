@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import AccountChoiceButton from '../resources/js/components/account/account_choice-button.vue'
-import AccountDocumentSelect from '../resources/js/components/account/account_document-select.vue'
-import AccountTextField from '../resources/js/components/account/account_text-field.vue'
-import AccountPersonalDataPage from '../resources/js/pages/account_personal-data-page.vue'
+import AccountChoiceButton from '../resources/js/components/account/account_choice_button.vue'
+import AccountDocumentSelect from '../resources/js/components/account/account_document_select.vue'
+import AccountTextField from '../resources/js/components/account/account_text_field.vue'
+import AccountPersonalDataPage from '../resources/js/pages/account_personal_data_page.vue'
 
 describe('Avanti form controls', () => {
   it('emits the typed value from a reusable text field', async () => {

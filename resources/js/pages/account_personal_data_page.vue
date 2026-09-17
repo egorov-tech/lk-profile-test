@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 import AccountBrand from '../components/account/account_brand.vue'
-import AccountChoiceButton from '../components/account/account_choice-button.vue'
-import AccountDocumentSelect from '../components/account/account_document-select.vue'
-import AccountInfoNote from '../components/account/account_info-note.vue'
-import AccountMobileMenu from '../components/account/account_mobile-menu.vue'
-import AccountStepButton from '../components/account/account_step-button.vue'
-import AccountTextField from '../components/account/account_text-field.vue'
+import AccountChoiceButton from '../components/account/account_choice_button.vue'
+import AccountDocumentSelect from '../components/account/account_document_select.vue'
+import AccountInfoNote from '../components/account/account_info_note.vue'
+import AccountMobileMenu from '../components/account/account_mobile_menu.vue'
+import AccountStepButton from '../components/account/account_step_button.vue'
+import AccountTextField from '../components/account/account_text_field.vue'
 
 const surname = ref('')
 const name = ref('')
