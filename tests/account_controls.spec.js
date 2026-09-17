@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 import AccountChoiceButton from '../resources/js/components/account/account_choice-button.vue'
+import AccountDocumentSelect from '../resources/js/components/account/account_document-select.vue'
 import AccountTextField from '../resources/js/components/account/account_text-field.vue'
 import AccountPersonalDataPage from '../resources/js/pages/account_personal-data-page.vue'
 
@@ -24,6 +25,16 @@ describe('Avanti form controls', () => {
 
     expect(wrapper.emitted('select')[0]).toEqual(['male'])
   })
+
+  it('opens a styled list and emits the selected document type', async () => {
+    const wrapper = mount(AccountDocumentSelect)
+
+    await wrapper.get('button').trigger('click')
+    expect(wrapper.get('[role="listbox"]').isVisible()).toBe(true)
+
+    await wrapper.get('[role="option"][data-value="passport"]').trigger('click')
+    expect(wrapper.emitted('update:modelValue')[0]).toEqual(['passport'])
+  })
 })
 
 describe('Avanti personal data form', () => {
@@ -36,5 +47,14 @@ describe('Avanti personal data form', () => {
     await wrapper.get('form').trigger('submit.prevent')
 
     expect(wrapper.get('[role="status"]').text()).toContain('Dati salvati')
+  })
+
+  it('exposes the mobile burger menu', async () => {
+    const wrapper = mount(AccountPersonalDataPage)
+
+    await wrapper.get('[aria-label="Apri menu"]').trigger('click')
+
+    expect(wrapper.get('[aria-label="Apri menu"]').attributes('aria-expanded')).toBe('true')
+    expect(wrapper.get('[role="navigation"]').isVisible()).toBe(true)
   })
 })

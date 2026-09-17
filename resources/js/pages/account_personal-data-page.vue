@@ -4,6 +4,7 @@ import AccountBrand from '../components/account/account_brand.vue'
 import AccountChoiceButton from '../components/account/account_choice-button.vue'
 import AccountDocumentSelect from '../components/account/account_document-select.vue'
 import AccountInfoNote from '../components/account/account_info-note.vue'
+import AccountMobileMenu from '../components/account/account_mobile-menu.vue'
 import AccountStepButton from '../components/account/account_step-button.vue'
 import AccountTextField from '../components/account/account_text-field.vue'
 
@@ -12,6 +13,7 @@ const name = ref('')
 const gender = ref('male')
 const documentType = ref('')
 const status = ref('')
+const menuOpen = ref(false)
 
 function submitForm() {
   status.value = 'Dati salvati. Puoi continuare.'
@@ -22,6 +24,7 @@ function submitForm() {
   <div class="account-personal-data">
     <header class="account-personal-data__header">
       <AccountBrand />
+      <AccountMobileMenu :open="menuOpen" @toggle="menuOpen = !menuOpen" @close="menuOpen = false" />
     </header>
 
     <main class="account-personal-data__main">
