@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
+import chevronUrl from '../../../assets/figma/avanti-chevron-right.svg'
 
 const props = defineProps({
   modelValue: { type: String, default: '' },
@@ -32,7 +33,9 @@ function select(value) {
         @click="open = !open"
       >
         <span id="document-type-value">{{ selectedLabel }}</span>
-        <span class="account-document-select__chevron" :class="{ 'account-document-select__chevron--open': open }" aria-hidden="true">⌄</span>
+        <span class="account-document-select__chevron" :class="{ 'account-document-select__chevron--open': open }" aria-hidden="true">
+          <img :src="chevronUrl" alt="">
+        </span>
       </button>
       <div v-if="open" class="account-document-select__menu" role="listbox" aria-labelledby="document-type-label">
         <button

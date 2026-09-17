@@ -17,15 +17,20 @@
 .account-choice-button__symbol { font-size: 40px; font-weight: 400; line-height: 1; }
 .account-document-select__control { position: relative; }
 .account-document-select__trigger { align-items: center; background: var(--account-ground); border: 1.5px solid var(--account-accent); border-radius: 19px; box-shadow: 0 4px 6px rgba(0, 0, 0, .05); color: var(--account-muted); display: flex; font-size: 18px; height: 85px; justify-content: space-between; padding: 0 24px; text-align: left; width: 100%; }
-.account-document-select__chevron { color: var(--account-accent); font-size: 29px; line-height: 1; transition: transform .16s ease; }
+.account-document-select__chevron { align-items: center; display: inline-flex; height: 24px; justify-content: center; transition: transform .16s ease; width: 24px; }
+.account-document-select__chevron img { display: block; height: 24px; transform: rotate(90deg); width: 24px; }
 .account-document-select__chevron--open { transform: rotate(180deg); }
-.account-document-select__menu { background: #fff; border: 1.5px solid var(--account-accent); border-radius: 16px; box-shadow: 0 12px 24px rgba(14, 68, 80, .14); display: grid; gap: 4px; left: 0; margin-top: 8px; overflow: hidden; padding: 6px; position: absolute; right: 0; top: 100%; z-index: 2; }
-.account-document-select__option { background: transparent; border: 0; border-radius: 10px; color: var(--account-copy); font-size: 16px; padding: 12px 16px; text-align: left; }
-.account-document-select__option:hover, .account-document-select__option--active { background: #eaf7f9; color: #137a92; }
+.account-document-select__menu { background: #fff; border: 1.5px solid var(--account-accent); border-radius: 16px; box-shadow: 0 12px 24px rgba(14, 68, 80, .14); display: grid; gap: 4px; left: 0; margin-top: 8px; overflow: clip; padding: 6px; position: absolute; right: 0; top: 100%; z-index: 2; }
+.account-document-select__option { background: transparent; border: 0; border-radius: 10px; color: var(--account-copy); font-size: 16px; line-height: 1.35; padding: 12px 16px; text-align: left; transition: background-color .14s ease, color .14s ease; }
+.account-document-select__option--active { background: #eaf7f9; color: #137a92; }
+@media (hover: hover) { .account-document-select__option:hover { background: rgba(36, 145, 170, .09); color: #137a92; } }
 .account-info-note { align-items: center; color: var(--account-muted); display: flex; font-size: 14px; font-weight: 300; gap: 12px; letter-spacing: .04em; line-height: 1.4; margin: -4px 0 0; }
 .account-info-note__icon { align-items: center; border: 1px solid var(--account-accent); border-radius: 12px; color: var(--account-accent); display: inline-flex; flex: 0 0 24px; font-size: 14px; font-weight: 600; height: 24px; justify-content: center; }
 .account-personal-data__pagination { align-items: center; display: flex; justify-content: space-between; }
 .account-step-button { align-items: center; border-radius: 12px; display: inline-flex; font-size: 24px; font-weight: 500; gap: 16px; height: 60px; justify-content: center; width: 294px; }
+.account-step-button__icon { align-items: center; display: inline-flex; height: 24px; justify-content: center; width: 24px; }
+.account-step-button__icon img { display: block; height: 24px; width: 24px; }
+.account-step-button__icon--back { transform: rotate(180deg); }
 .account-step-button--back { background: var(--account-surface); border: 1.5px solid var(--account-accent); color: var(--account-accent); }
 .account-step-button--next { background: var(--account-accent); border: 1.5px solid var(--account-accent); box-shadow: 0 8px 10px rgba(0, 0, 0, .25); color: #fff; }
 .account-step-button:hover { filter: brightness(.96); }
@@ -46,7 +51,7 @@
   .account-choice-button { font-size: 16px; gap: 8px; }
   .account-choice-button__symbol { font-size: 23px; }
   .account-document-select__trigger { border-radius: 14px; font-size: 15px; height: 58px; padding: 0 16px; }
-  .account-document-select__chevron { font-size: 24px; }
+  .account-document-select__chevron, .account-document-select__chevron img { height: 24px; width: 24px; }
   .account-document-select__menu { border-radius: 14px; }
   .account-document-select__option { font-size: 15px; padding: 10px 12px; }
   .account-info-note { align-items: center; font-size: 12px; gap: 10px; margin: 0; }
