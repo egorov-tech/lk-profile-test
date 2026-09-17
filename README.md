@@ -1,6 +1,14 @@
-# Тестовое окно ЛК — «Мой профиль»
+# Avanti — Personal Data Form
 
-Vue 3-реализация адаптивного окна личного кабинета. Компоненты написаны на Composition API через `<script setup>`, названы с префиксом `account_` и не содержат inline CSS.
+Тестовое задание: один экран личного кабинета из Figma, реализованный на Vue 3 Composition API и подготовленный для Laravel через Blade + Vite.
+
+## Что готово
+
+- точная desktop-реализация экрана `Personal Data Form` Avanti;
+- адаптация для 390px без горизонтального скролла;
+- отдельные переиспользуемые компоненты: поля, выбор пола, селект документа, навигация шага, бренд и информационная строка;
+- никаких inline CSS и inline JavaScript;
+- Vitest-проверки и production build.
 
 ## Запуск
 
@@ -16,19 +24,6 @@ npm test
 npm run build
 ```
 
-## Структура
-
-```text
-resources/js/components/account/  # переиспользуемые Vue-компоненты
-resources/js/pages/               # собирает окно ЛК
-resources/css/account/            # токены, shell и стили профиля
-resources/views/account-profile.blade.php
-```
-
 ## Laravel
 
-Скопируйте `resources/` в Laravel-проект, подключите маршрут к `account-profile.blade.php` и передайте `$profile` с ключами `firstName`, `lastName`, `email`, `phone`. Blade помещает JSON в `data-profile`, поэтому inline JavaScript не используется. `@vite('resources/js/app.js')` уже находится в шаблоне.
-
-## Поведение демо
-
-Кнопка «Сохранить изменения» не отправляет сетевой запрос: она демонстрирует успешное состояние через toast. API-интеграция намеренно оставлена Laravel-контроллеру.
+Подключите `resources/views/account-profile.blade.php` и Vite entry `resources/js/app.js`. Демо-форма не отправляет сетевой запрос: она показывает локальное успешное состояние, а серверная обработка остаётся Laravel-контроллеру.

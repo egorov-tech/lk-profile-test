@@ -1,39 +1,12 @@
-.account-app { min-height: 100vh; background: var(--account-ground); }
-.account-sidebar { background: var(--account-sidebar); color: #fff; display: flex; flex-direction: column; inset: 0 auto 0 0; padding: 28px 20px; position: fixed; width: 264px; z-index: 20; }
-.account-sidebar__brand { align-items: center; display: flex; font-size: 15px; font-weight: 750; gap: 10px; letter-spacing: -.01em; }
-.account-sidebar__mark { align-items: center; background: #fff; border-radius: 9px; color: var(--account-sidebar); display: inline-flex; font-weight: 900; height: 30px; justify-content: center; width: 30px; }
-.account-sidebar__close { background: transparent; border: 0; color: #fff; display: none; font-size: 30px; line-height: 1; margin-left: auto; }
-.account-sidebar__nav { display: grid; gap: 6px; margin-top: 58px; }
-.account-sidebar__link { background: transparent; border: 0; border-radius: 9px; color: #afb8c9; font-size: 14px; padding: 12px 14px; text-align: left; transition: background .16s ease, color .16s ease; }
-.account-sidebar__link:hover, .account-sidebar__link--active { background: rgba(255, 255, 255, .11); color: #fff; }
-.account-sidebar__help { border-top: 1px solid rgba(255, 255, 255, .14); color: #aeb7c8; font-size: 13px; line-height: 1.5; margin-top: auto; padding: 20px 8px 0; }
-.account-sidebar__help p { color: #fff; font-weight: 650; margin: 0 0 5px; }
-.account-sidebar__help a { text-underline-offset: 3px; }
-.account-main { margin-left: 264px; min-height: 100vh; }
-.account-header { align-items: center; background: rgba(255,255,255,.82); border-bottom: 1px solid var(--account-line); display: flex; justify-content: space-between; min-height: 96px; padding: 20px clamp(24px, 5vw, 76px); }
-.account-header__eyebrow, .account-profile__kicker { color: var(--account-accent); font-size: 12px; font-weight: 750; letter-spacing: .08em; margin: 0 0 7px; text-transform: uppercase; }
-.account-header__title { font-size: clamp(23px, 3vw, 30px); letter-spacing: -.045em; line-height: 1; margin: 0; }
-.account-header__user { align-items: center; background: transparent; border: 0; color: var(--account-ink); display: flex; font-size: 14px; font-weight: 700; gap: 10px; padding: 4px; }
-.account-header__avatar { align-items: center; background: #e8e7ff; border-radius: 50%; color: var(--account-accent); display: flex; height: 35px; justify-content: center; width: 35px; }
-.account-header__menu { background: transparent; border: 0; display: none; padding: 8px 0; width: 34px; }
-.account-header__menu span { background: var(--account-ink); display: block; height: 2px; margin: 5px 0; width: 24px; }
-.account-app__scrim { background: rgba(14, 19, 31, .48); inset: 0; position: fixed; z-index: 10; }
-.account-toast { align-items: center; background: #172033; border-radius: 10px; bottom: 24px; box-shadow: var(--account-shadow); color: #fff; display: flex; font-size: 14px; font-weight: 650; gap: 8px; padding: 14px 17px; position: fixed; right: 24px; z-index: 30; }
-.account-toast span { align-items: center; background: #c5ffda; border-radius: 50%; color: #13582d; display: flex; font-weight: 900; height: 18px; justify-content: center; width: 18px; }
+.account-personal-data { background: var(--account-ground); min-height: 100vh; }
+.account-personal-data__header { align-items: center; background: var(--account-surface); border-bottom: 2px solid var(--account-accent); display: flex; height: 110px; padding: 0 100px; }
+.account-brand { align-items: center; color: var(--account-ink); display: inline-flex; font-size: 44.5px; font-weight: 700; gap: 16px; letter-spacing: -.05em; line-height: 1; text-decoration: none; }
+.account-brand img { display: block; height: 49px; width: 63px; }
+.account-personal-data__main { display: flex; justify-content: center; padding: 48px 100px 80px; }
 
-@media (max-width: 900px) {
-  .account-sidebar { box-shadow: 20px 0 50px rgba(9, 13, 24, .26); transform: translateX(-105%); transition: transform .2s ease; width: min(82vw, 320px); }
-  .account-sidebar--open { transform: translateX(0); }
-  .account-sidebar__close, .account-header__menu { display: block; }
-  .account-main { margin-left: 0; }
-  .account-header { gap: 16px; justify-content: flex-start; }
-  .account-header__user { margin-left: auto; }
-}
-
-@media (max-width: 560px) {
-  .account-header { min-height: 76px; padding: 14px 20px; }
-  .account-header__eyebrow { display: none; }
-  .account-header__title { font-size: 22px; }
-  .account-header__user-name { display: none; }
-  .account-toast { bottom: 18px; left: 18px; right: 18px; }
+@media (max-width: 760px) {
+  .account-personal-data__header { height: 80px; padding: 0 24px; }
+  .account-brand { font-size: 30px; gap: 11px; }
+  .account-brand img { height: 34px; width: 44px; }
+  .account-personal-data__main { padding: 24px 16px 48px; }
 }

@@ -1,13 +1,11 @@
 :root {
-  --account-ink: #172033;
-  --account-muted: #6f7887;
-  --account-line: #e6e9ef;
-  --account-paper: #ffffff;
-  --account-ground: #f5f6f8;
-  --account-accent: #4f46e5;
-  --account-accent-dark: #3931c8;
-  --account-sidebar: #172033;
-  --account-shadow: 0 16px 38px rgba(23, 32, 51, .08);
+  --account-ink: #09090b;
+  --account-copy: #464646;
+  --account-muted: #747474;
+  --account-surface: #ffffff;
+  --account-ground: #f8fafb;
+  --account-accent: #2491aa;
+  --account-shadow: 0 10px 15px rgba(0, 0, 0, .04);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--account-ink);
   background: var(--account-ground);
@@ -15,6 +13,5 @@
 
 * { box-sizing: border-box; }
 body { margin: 0; min-width: 320px; }
-button, input { font: inherit; }
+button, input, select { font: inherit; }
 button { cursor: pointer; }
-a { color: inherit; }

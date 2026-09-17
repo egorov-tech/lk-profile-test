@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div id="account-profile-app" data-profile='@json($profile ?? [])'></div>
+  <div id="account-profile-app"></div>
 @endsection
 
 @push('scripts')
